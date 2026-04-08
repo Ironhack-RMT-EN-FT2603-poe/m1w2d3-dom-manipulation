@@ -106,3 +106,22 @@ addBtnNode.addEventListener("click", () => {
 
   ulNode.innerHTML += `<li>${userInput}</li>`
 })
+
+const sectionNode = document.querySelector("#final-section")
+
+sectionNode.addEventListener("click", () => {
+  console.log(sectionNode.className)
+
+  // sectionNode.className = "red-container"
+
+  // console.log(sectionNode.classList)
+  sectionNode.classList.toggle("blue-container")
+  sectionNode.classList.toggle("red-container")
+})
+
+const lastH2Node = document.querySelector("#last-h2")
+lastH2Node.addEventListener("mouseenter", () => {
+  console.log(lastH2Node.style)
+  lastH2Node.style.color = "blue"
+  lastH2Node.style.backgroundColor = "black"
+})

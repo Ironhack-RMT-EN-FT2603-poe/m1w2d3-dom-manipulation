@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  color: darkblue;
+  border: solid 2px black;
+}
+
+.red-container {
+  background-color: lightcoral;
+}
+
+.blue-container {
+  background-color: lightskyblue;
+}
