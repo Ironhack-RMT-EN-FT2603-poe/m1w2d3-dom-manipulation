@@ -1,18 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Learning DOM</h1>
+    <div>
+      <p>some parag</p>
+    </div>
 
-  <h1>Learning DOM</h1>
-  <div>
-    <p>some parag</p>
-  </div>
-
-    <h1 id="second-title" class="title blue">this is another h1 <span>with a span inside</span></h1>
+    <h1 id="second-title" class="title blue">
+      this is another h1 <span>with a span inside</span>
+    </h1>
 
     <p class="some-text">Here we have a paragraph</p>
     <p class="some-text">And here we have another paragraph</p>
@@ -30,8 +31,31 @@
       <p>paragraph 2</p>
     </div>
 
-    <hr>
+    <hr />
 
-  <script src="./script.js"></script>
-</body>
+    <h1 id="third-title">Learning to manipulate the DOM</h1>
+
+    <div id="count">
+      <h2>€<span>0</span></h2>
+      <button id="increment">Increase</button>
+    </div>
+
+    <br />
+
+    <button id="delete-btn">Delete me!</button>
+
+    <br />
+    <br />
+
+    <div id="add-form">
+      <input id="name" type="text" />
+      <button>Add</button>
+
+      <h3>List:</h3>
+      <ul id="add-list">
+      </ul>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
