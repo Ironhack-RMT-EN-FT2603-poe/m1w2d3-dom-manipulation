@@ -14,10 +14,6 @@ console.log(h1Node)
 console.log(h1Node.innerText)
 console.log(pNode.innerText)
 
-
-//2. DOM mapulation
-h1Node.innerText = "Manipulating the DOM"
-
 const anotherH1Node = document.querySelector("#second-title")
 console.log(anotherH1Node.innerText)
 console.log(anotherH1Node.innerHTML)
@@ -55,4 +51,58 @@ cardsNodeList.forEach((cardNode) => {
   console.log(h3Node.innerText)
 
   // ... now give me the p of each card
+})
+
+
+//2. DOM mapulation
+h1Node.innerText = "Manipulating the DOM"
+
+
+const newH1Node = document.querySelector("#third-title")
+// console.log(newH1Node)
+
+newH1Node.addEventListener("click", () => {
+  console.log("user clicking on the h3")
+  // newH1Node.innerText = "Clicked!"
+  newH1Node.innerHTML = "this is an h3! <span>with a span inside!</span>"
+})
+
+//* updating nodes
+
+const buttonNode = document.querySelector("#increment")
+const spanNode = document.querySelector("#count h2 span")
+
+buttonNode.addEventListener("click", () => {
+  // console.log("clicking")
+  // spanNode.innerText++
+  spanNode.innerText = Number(spanNode.innerText) + 1
+})
+
+//* Deleting and Adding nodes
+
+const deleteBtnNode = document.querySelector("#delete-btn")
+console.log(deleteBtnNode)
+
+deleteBtnNode.addEventListener("dblclick", () => {
+  console.log("doble clicking")
+  deleteBtnNode.remove() // it is not destroyed. It is just out of the DOM.
+  console.log(deleteBtnNode)
+
+  // document.querySelector("body").remove()
+})
+
+
+const inputNode = document.querySelector("#name")
+const addBtnNode = document.querySelector("#add-form button")
+const ulNode = document.querySelector("#add-form ul")
+
+// console.log(inputNode, addBtnNode, ulNode)
+
+addBtnNode.addEventListener("click", () => {
+  // console.log("testing")
+  console.log(inputNode.value)
+
+  let userInput = inputNode.value
+
+  ulNode.innerHTML += `<li>${userInput}</li>`
 })
